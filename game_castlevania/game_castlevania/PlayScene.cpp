@@ -692,13 +692,20 @@ void CPlayScenceKeyHandler::KeyState(BYTE* states)
 	}
 	else if (game->IsKeyDown(DIK_UP))
 	{
-		if (simon->canClimbUpStair)
+		/*simon->StairUp();
+		if (simon->isOnStair) {      
+			simon->StairUp();
+		}
+		else {
+			simon->Idle();
+		}*/
+		if (simon->canClimbUpStair)      //simon den duoi chan cau thang va cham
 		{
 			simon->StairUp();
 		}
 		else
 		{
-			if (simon->isOnStair) {
+			if (simon->isOnStair) {			//if simon dang o tren cau thang
 				simon->StairUp();
 			}
 			else {

@@ -1,6 +1,6 @@
 #include "StairBot.h"
 
-StairBot::StairBot()
+StairBot::StairBot()         //object chan cau thang
 {
 }
 

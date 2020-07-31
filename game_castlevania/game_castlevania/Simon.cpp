@@ -107,7 +107,7 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 					xStair = st->x;
 					yStair = st->y;
 					direcStair = st->nx;
-					//DebugOut(L"vao ham va cham voi top isOnStair=%d, isDownStair=%d, canClimbDownStair=%d\n", isOnStair, isDownStair, canClimbDownStair);
+					DebugOut(L"vaop isOnStair=%d, isDownStair=%d, canClimbDownStair=%d\n", isOnStair, isDownStair, canClimbDownStair);
 				}
 				else
 					if (isUpStair) {
@@ -123,9 +123,9 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			}
 		}
 
-		else if (dynamic_cast<StairBot*>(colliable_objects->at(i)))
+		else if (dynamic_cast<StairBot*>(colliable_objects->at(i)))														// va cham duoi chan cau thang
 		{
-			StairBot* sb = dynamic_cast<StairBot*>(colliable_objects->at(i));           //cau thang
+			StairBot* sb = dynamic_cast<StairBot*>(colliable_objects->at(i));											// va cham duoi chan cau thang
 
 			float l1, t1, r1, b1, l2, t2, r2, b2;
 			GetBoundingBox(l1, t1, r1, b1);
@@ -224,8 +224,8 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 
 		// No collision occured, proceed normally
 
-		for (UINT i = 0; i < coEvents.size(); i++)
-		{
+		for (UINT i = 0; i < coEvents.size(); i++)																						//va cham voi chan duoi cau thang
+		{																														
 			LPCOLLISIONEVENT e = coEvents[i];
 			if (dynamic_cast<StairTop*>(e->obj) || dynamic_cast<StairBot*>(e->obj))
 			{

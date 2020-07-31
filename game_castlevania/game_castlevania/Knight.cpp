@@ -17,14 +17,14 @@ void Knight::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 	GameObject::Update(dt, colliable_objects);
 	x += dx;
 	y += dy;
-
-	if (vx < 0 && x < left_max) {
-		x = left_max; vx = -vx;
+	
+	if (vx < 0 && x < left_max-10) {
+		x = left_max-10; vx = -vx;
 		state = 1;
 	}
 
-	if (vx > 0 && x > right_max) {
-		x = right_max; vx = -vx;
+	if (vx > 0 && x > right_max-30) {
+		x = right_max-30; vx = -vx;
 		state = 0;
 	}
 }
@@ -32,7 +32,8 @@ void Knight::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 void Knight::Render()
 {
 	animation_set->at(state)->Render(x, y);
-	//RenderBoundingBox();
+	//animation_set->at(2)->Render(x, y);
+	RenderBoundingBox();
 }
 
 void Knight::GetBoundingBox(float& left, float& top, float& right, float& bottom)
@@ -40,5 +41,5 @@ void Knight::GetBoundingBox(float& left, float& top, float& right, float& bottom
 	left = x;
 	top = y;
 	right = left + 16;
-	bottom = top + 32;
+	bottom = top + 31;
 }
