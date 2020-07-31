@@ -555,10 +555,9 @@ void CPlayScene::Update(DWORD dt)
 			if (torch->isColi == true) {
 				Grid* grid = Grid::GetInstance();
 				grid->deleteObject(objects[i]);
-				//torch->SetPosition(0, 0);
 			}
 				
-					//torch->SetPosition(10, 10);
+			
 		}
 		else if (dynamic_cast<Candle*>(objects[i]))							//va cham voi nen
 		{
