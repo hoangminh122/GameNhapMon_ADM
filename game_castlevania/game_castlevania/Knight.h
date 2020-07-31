@@ -9,7 +9,8 @@ class Knight:public GameObject
 public:
 	//bool isIdle;
 	float left_max, right_max;
-
+	int isDied;
+	void SetDied() { isDied = 1; };
 	Knight(float x = 0.0f, float y = 0.0f);
 	virtual void Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects = NULL);
 	virtual void Render();
