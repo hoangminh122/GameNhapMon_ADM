@@ -16,8 +16,8 @@ void Bat::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 {
 	float simonX=0, simonY=0;
 
-	Simon::GetInstance()->GetPosition(simonX, simonY);
-	//DebugOut(L"simonX:%f, simonY:%f, x:%f, y:%f, left_max=%f, right_max=%f, top_max=%f, bot_max=%f\n", simonX, simonY, x, y, left_max, right_max, top_max, bot_max);
+	Simon::GetInstance()->GetPosition(simonX, simonY);											//quai  chay theo simon => lay vi tri cua simon
+	DebugOut(L"simonX:%f, simonY:%f, x:%f, y:%f, left_max=%f, right_max=%f, top_max=%f, bot_max=%f\n", simonX, simonY, x, y, left_max, right_max, top_max, bot_max);
 
 	/*if (y - simonY >= -20)
 	{
@@ -31,8 +31,10 @@ void Bat::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 	}
 	else
 		vy = 0;*/
+	
 	if (left_max < simonX && simonX < right_max && top_max < simonY && simonY < bot_max)
 	{
+		this->state = 1;
 		vx = 0.03f;
 		vy = 0.02;
 		if (y_de == NULL)
@@ -54,7 +56,15 @@ void Bat::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 	Grid* grid = Grid::GetInstance();
 	Map* map = Map::GetInstance();
 	if (x > map->GetWidth() - 10)
-		grid->deleteObject(this);
+	{
+		x = start_x;
+		y = start_y;
+		vx = 0;
+		vx = 0;
+		this->state = 0;
+	}
+		//grid->deleteObject(this);
+		
 	else
 		grid->Update(this);
 
@@ -62,7 +72,7 @@ void Bat::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 
 void Bat::Render()
 {
-	animation_set->at(0)->Render(x,y);
+	animation_set->at(state)->Render(x,y);
 	//RenderBoundingBox();
 }
 

@@ -92,8 +92,8 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 	for (int i = 0; i < colliable_objects->size(); i++)
 	{
 		if (dynamic_cast<StairTop*>(colliable_objects->at(i)))
-		{
-			StairTop* st = dynamic_cast<StairTop*>(colliable_objects->at(i));
+		{																			// va cham dinh cau thang
+			StairTop* st = dynamic_cast<StairTop*>(colliable_objects->at(i));		// va cham dinh cau thang
 
 			float l1, t1, r1, b1, l2, t2, r2, b2;
 			GetBoundingBox(l1, t1, r1, b1);
@@ -101,15 +101,17 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 
 			if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
 			{
-				if (!isOnStair)
-				{
-					canClimbDownStair = true;
-					xStair = st->x;
-					yStair = st->y;
-					direcStair = st->nx;
-					DebugOut(L"vaop isOnStair=%d, isDownStair=%d, canClimbDownStair=%d\n", isOnStair, isDownStair, canClimbDownStair);
-				}
-				else
+
+
+				///*if (!isOnStair)
+				//{
+				//	canClimbDownStair = true;
+				//	xStair = st->x;
+				//	yStair = st->y;
+				//	direcStair = st->nx;
+				//	DebugOut(L"vaop isOnStair=%d, isDownStair=%d, canClimbDownStair=%d\n", isOnStair, isDownStair, canClimbDownStair);
+				//}
+				//else*/
 					if (isUpStair) {
 						isOnStair = false;
 						nx = nx_stair;
@@ -164,6 +166,7 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 		}
 		if (dynamic_cast<Bat*>(colliable_objects->at(i)))
 		{
+			Simon* simon = dynamic_cast<Simon*>(colliable_objects->at(i));
 			Bat* bat = dynamic_cast<Bat*>(colliable_objects->at(i));						//con doi
 			float l1, t1, r1, b1, l2, t2, r2, b2;
 			GetBoundingBox(l1, t1, r1, b1);
@@ -172,7 +175,9 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
 			{
 				Grid* grid = Grid::GetInstance();
-				grid->deleteObject(bat);
+				//grid->deleteObject(simon);
+				this->state = SIMON_ANI_COLORS_LEFT;
+				//grid->deleteObject(simon);
 			}
 		}
 		if (dynamic_cast<Portal*>(colliable_objects->at(i)))
