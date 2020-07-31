@@ -22,6 +22,15 @@ void Whip::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			//DebugOut(L"whip: ml:%f,mt:%f,mr:%f,\mb:%f torch: l:%f,t:%f,r:%f,b:%f \n", l1, t1, r1, b1, l2, t2, r2, b2);
 		if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
 		{
+			//va cham con doi
+			if (dynamic_cast<Bat*>(colliable_objects->at(i)))
+			{
+				Bat* bat = dynamic_cast<Bat*>(colliable_objects->at(i));
+				bat->SetDied();
+				//DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
+
+			}
+
 			if (dynamic_cast<Torch*>(colliable_objects->at(i)))
 			{
 				Torch* torch = dynamic_cast<Torch*>(colliable_objects->at(i));

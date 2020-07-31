@@ -14,6 +14,12 @@ Bat::Bat(float x, float y)
 
 void Bat::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 {
+	Grid* grid = Grid::GetInstance();
+	Map* map = Map::GetInstance();
+	if (isDied == 1)
+		grid->deleteObject(this);
+
+
 	float simonX=0, simonY=0;
 
 	Simon::GetInstance()->GetPosition(simonX, simonY);											//quai  chay theo simon => lay vi tri cua simon
@@ -53,8 +59,7 @@ void Bat::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 	x += dx;
 	if (y > y_de + 42) y = y_de + 42;
 	if (y < 1) y = 1;
-	Grid* grid = Grid::GetInstance();
-	Map* map = Map::GetInstance();
+	
 	if (x > map->GetWidth() - 10)
 	{
 		x = start_x;
@@ -63,10 +68,9 @@ void Bat::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 		vx = 0;
 		this->state = 0;
 	}
-		//grid->deleteObject(this);
-		
 	else
 		grid->Update(this);
+	
 
 }
 

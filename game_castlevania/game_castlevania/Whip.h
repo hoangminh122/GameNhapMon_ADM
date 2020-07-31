@@ -3,6 +3,7 @@
 #include "Utils.h"
 #include "Torch.h"
 #include "Brick.h"
+#include "Bat.h"
 
 class Whip: public GameObject
 {
