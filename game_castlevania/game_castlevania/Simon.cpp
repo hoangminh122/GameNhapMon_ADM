@@ -339,12 +339,12 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 				{
 					Item* item = dynamic_cast<Item*>(e->obj);
 					item->isfinish = true;
-					/*if (item->GetTypeItem() == WHIP)
+					if (item->GetTypeItem() == WHIP)
 					{
 						preframe = 0;
 						loopani = 0;
-						Color();
-					}*/
+						//Color();
+					}
 
 					Grid* grid = Grid::GetInstance();					//xoa vu khi
 					grid->deleteObject(e->obj);
@@ -614,7 +614,7 @@ void Simon::Render()
 			}
 		}
 		
-		//DebugOut(L"Xuat isStanding: %d curentframe: %d\n", isStanding, animation_set->at(ani)->GetcurrenFrame());
+		DebugOut(L"Xuat isStanding: %d curentframe: %d\n", isStanding, animation_set->at(ani)->GetcurrenFrame());
 
 
 		if (ani == SIMON_ANI_ASCEND_WHIP_RIGHT && animation_set->at(ani)->GetcurrenFrame() == 0)
@@ -627,8 +627,8 @@ void Simon::Render()
 
 
 	//RenderBoundingBox();
-	//DebugOut(L"Xuat isJump: %d vy= %d\n", isJump, vy);
-	//DebugOut(L"Xuat curenframe: %d\n", animation_set->at(ani)->GetcurrenFrame());
+	DebugOut(L"Xuat isJump: %d vy= %d\n", isJump, vy);
+	DebugOut(L"Xuat curenframe: %d\n", animation_set->at(ani)->GetcurrenFrame());
 
 }
 
@@ -762,12 +762,12 @@ void Simon::Standing()
 
 void Simon::Color()
 {
-	if (nx > 0)
+	/*if (nx > 0)
 		SetState(SIMON_STATE_COLORS_RIGHT);
 	else
 		SetState(SIMON_STATE_COLORS_LEFT);
 	isStanding = false;
-	isJump = false;
+	isJump = false;*/
 }
 
 void Simon::Reset()
