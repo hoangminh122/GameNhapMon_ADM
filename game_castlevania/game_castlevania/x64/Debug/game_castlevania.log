@@ -1,0 +1,147 @@
+﻿  Animation.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\animation.cpp(55): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Animations.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\animations.cpp(48): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [45]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\animations.cpp(48): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+  Axe.cpp
+  Bat.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\bat.cpp(37): warning C4305: '=': truncation from 'double' to 'float'
+  Boomerang.cpp
+  Brick.cpp
+  Brickmove.cpp
+  Camera.cpp
+  Candle.cpp
+  Cell.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\cell.cpp(24): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [15]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\cell.cpp(24): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\cell.cpp(27): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [13]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\cell.cpp(27): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+  define.cpp
+  Game.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(83): error C2065: 'GWL_HINSTANCE': undeclared identifier
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(90): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [36]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(90): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(99): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [30]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(99): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(138): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [34]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(138): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(142): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [51]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(142): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(160): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [30]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(160): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(262): warning C4305: '=': truncation from '__int64' to 'float'
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(263): warning C4305: '=': truncation from '__int64' to 'float'
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(273): warning C4305: '=': truncation from '__int64' to 'float'
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(274): warning C4305: '=': truncation from '__int64' to 'float'
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(326): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [33]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(326): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(346): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [37]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(346): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(375): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [60]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(375): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(382): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [30]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\game.cpp(382): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+  GameObject.cpp
+  Ghost.cpp
+  Grid.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(39): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [63]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(39): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(48): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(49): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(71): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(73): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(124): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(125): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(129): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(130): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(145): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(146): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(151): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [27]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\grid.cpp(151): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+  HolyWater.cpp
+  Item.cpp
+  KeyEventHandler.cpp
+  Knight.cpp
+  main.cpp
+  Generating Code...
+  Compiling...
+  Map.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\map.cpp(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\map.cpp(45): warning C4101: 'my': unreferenced local variable
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\map.cpp(82): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\map.cpp(87): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+  Monkey.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\monkey.cpp(22): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [15]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\monkey.cpp(22): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\monkey.cpp(25): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [14]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\monkey.cpp(25): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+  PlayScene.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(88): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [34]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(88): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(152): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(153): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(166): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [44]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(166): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(173): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [32]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(173): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(184): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [30]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(184): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(190): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [29]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(190): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(198): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(199): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(207): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [29]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(207): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(230): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(231): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(232): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(233): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(244): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(245): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(257): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [31]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(257): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(264): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(265): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(272): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(273): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(279): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(311): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(312): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(318): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [31]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(318): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(339): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [8]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(339): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(359): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [49]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(359): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(411): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [40]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(411): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(548): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(610): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [28]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\playscene.cpp(610): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+  Portal.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\portal.cpp(9): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\portal.cpp(10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Scence.cpp
+  Simon.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\simon.cpp(327): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [14]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\simon.cpp(327): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\simon.cpp(793): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [7]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\simon.cpp(793): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+  Sprite.cpp
+  Sprites.cpp
+  StairBot.cpp
+  StairTop.cpp
+  Textures.cpp
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\textures.cpp(20): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [41]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\textures.cpp(20): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+e:\game\game_castlevania-master\game_castlevania\game_castlevania\textures.cpp(51): error C2664: 'void DebugOut(wchar_t *,...)': cannot convert argument 1 from 'const wchar_t [38]' to 'wchar_t *'
+  e:\game\game_castlevania-master\game_castlevania\game_castlevania\textures.cpp(51): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+  Torch.cpp
+  Utils.cpp
+  Weapon.cpp
+  Whip.cpp
+  White.cpp
+  Zombie.cpp
+  Generating Code...

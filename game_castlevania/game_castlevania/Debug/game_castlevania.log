@@ -1,0 +1,29 @@
+﻿  PlayScene.cpp
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(106): warning C4018: '<': signed/unsigned mismatch
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(128): warning C4018: '<': signed/unsigned mismatch
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(152): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(153): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(198): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(199): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(230): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(231): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(232): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(233): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(244): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(245): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(264): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(265): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(272): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(273): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(279): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(311): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(312): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(455): warning C4018: '<': signed/unsigned mismatch
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(460): warning C4018: '<': signed/unsigned mismatch
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(548): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(491): warning C4101: 'gx': unreferenced local variable
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(491): warning C4101: 'gy': unreferenced local variable
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(586): warning C4018: '<': signed/unsigned mismatch
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(599): warning C4018: '<': signed/unsigned mismatch
+e:\game\game_castlevania_16520733\game_castlevania\game_castlevania\playscene.cpp(603): warning C4018: '<': signed/unsigned mismatch
+  game_castlevania.vcxproj -> E:\game\game_castlevania_16520733\game_castlevania\Debug\game_castlevania.exe
