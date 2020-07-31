@@ -161,12 +161,15 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
 			{
 				Grid* grid = Grid::GetInstance();
-				grid->deleteObject(knight);
+				//grid->deleteObject(knight);
+				//this->state = SIMON_ANI_DEATH_RIGHT;
+				this->x++;
+				this->y = this->y-5;
 			}
 		}
 		if (dynamic_cast<Bat*>(colliable_objects->at(i)))
 		{
-			Simon* simon = dynamic_cast<Simon*>(colliable_objects->at(i));
+			//Simon* simon = dynamic_cast<Simon*>(colliable_objects->at(i));
 			Bat* bat = dynamic_cast<Bat*>(colliable_objects->at(i));						//con doi
 			float l1, t1, r1, b1, l2, t2, r2, b2;
 			GetBoundingBox(l1, t1, r1, b1);
@@ -176,11 +179,15 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			{
 				Grid* grid = Grid::GetInstance();
 				//grid->deleteObject(simon);
-				this->state = SIMON_ANI_COLORS_LEFT;
+				//this->state = SIMON_ANI_DEATH_RIGHT;
 				//grid->deleteObject(simon);
+				this->x++;
+				this->y = this->y - 10;
+				this->vy = 0.1;
+				this->vx = 0.1;
 			}
 		}
-		if (dynamic_cast<Portal*>(colliable_objects->at(i)))
+		if (dynamic_cast<Portal*>(colliable_objects->at(i)))									//qua cong
 		{
 			Portal* p = dynamic_cast<Portal*>(colliable_objects->at(i));
 			float l1, t1, r1, b1, l2, t2, r2, b2;
@@ -631,7 +638,7 @@ void Simon::Render()
 			listWeapon.at(i)->Render();
 
 
-	//RenderBoundingBox();
+	RenderBoundingBox();
 	DebugOut(L"Xuat isJump: %d vy= %d\n", isJump, vy);
 	DebugOut(L"Xuat curenframe: %d\n", animation_set->at(ani)->GetcurrenFrame());
 

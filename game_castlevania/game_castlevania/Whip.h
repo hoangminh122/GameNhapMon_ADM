@@ -4,6 +4,7 @@
 #include "Torch.h"
 #include "Brick.h"
 #include "Bat.h"
+#include "Knight.h"
 
 class Whip: public GameObject
 {

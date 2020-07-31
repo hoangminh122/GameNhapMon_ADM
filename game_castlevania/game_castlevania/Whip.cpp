@@ -25,8 +25,16 @@ void Whip::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			//va cham con doi
 			if (dynamic_cast<Bat*>(colliable_objects->at(i)))
 			{
+				DebugOut(L"co va cham co va cham co va chamco va chamco va chamco va cham co va cham co va cham co va cham co va cham co va cham co va cham co va chamco va cham");
 				Bat* bat = dynamic_cast<Bat*>(colliable_objects->at(i));
 				bat->SetDied();
+				//DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
+
+			}
+			if (dynamic_cast<Knight*>(colliable_objects->at(i)))
+			{
+				Knight* knight = dynamic_cast<Knight*>(colliable_objects->at(i));
+				knight->SetDied();
 				//DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
 
 			}
@@ -72,7 +80,7 @@ void Whip::Render(int level,int nx, int frame, int alpha)
 	default:
 		break;
 	}
-	//RenderBoundingBox();
+	RenderBoundingBox();
 }
 
 void Whip::GetBoundingBox(float& l, float& t, float& r, float& b)
