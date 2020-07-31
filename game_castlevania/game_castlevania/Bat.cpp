@@ -77,7 +77,7 @@ void Bat::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 void Bat::Render()
 {
 	animation_set->at(state)->Render(x,y);
-	//RenderBoundingBox();
+	RenderBoundingBox();
 }
 
 void Bat::GetBoundingBox(float& left, float& top, float& right, float& bottom)
