@@ -5,6 +5,8 @@
 #include "Brick.h"
 #include "Bat.h"
 #include "Knight.h"
+#include "Ghost.h"
+
 
 class Whip: public GameObject
 {

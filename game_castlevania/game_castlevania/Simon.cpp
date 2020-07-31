@@ -187,6 +187,24 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 				this->vx = 0.1;
 			}
 		}
+
+		if (dynamic_cast<Monkey*>(colliable_objects->at(i)))
+		{
+			//Simon* simon = dynamic_cast<Simon*>(colliable_objects->at(i));
+			Monkey* monkey = dynamic_cast<Monkey*>(colliable_objects->at(i));						//con doi
+			float l1, t1, r1, b1, l2, t2, r2, b2;
+			GetBoundingBox(l1, t1, r1, b1);
+			monkey->GetBoundingBox(l2, t2, r2, b2);
+
+			if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
+			{
+				Grid* grid = Grid::GetInstance();
+				this->state = SIMON_ANI_DEATH_RIGHT;
+				grid->deleteObject(this);
+				
+			}
+		}
+
 		if (dynamic_cast<Portal*>(colliable_objects->at(i)))									//qua cong
 		{
 			Portal* p = dynamic_cast<Portal*>(colliable_objects->at(i));
@@ -366,11 +384,11 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 						Weapon* boom =  new Boomerang();
 						listWeapon.push_back(boom);
 					}
-					if (item->GetTypeItem() == HOLYWATER)
+					/*if (item->GetTypeItem() == HOLYWATER)
 					{
 						Weapon* water = new HolyWater();
 						listWeapon.push_back(water);
-					}
+					}*/
 					if (item->GetTypeItem() == AXE)
 					{
 						Axe* axe = new Axe();

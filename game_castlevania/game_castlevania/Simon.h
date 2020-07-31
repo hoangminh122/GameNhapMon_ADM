@@ -2,6 +2,7 @@
 #include "GameObject.h"
 #include "Whip.h"
 #include "Weapon.h"
+#include "Monkey.h"
 
 #define SIMON_WALKING_SPEED		0.08f 
 //0.1f

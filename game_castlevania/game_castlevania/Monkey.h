@@ -8,7 +8,7 @@
 #define	MONKEY_STATE_WALK		1
 #define	MONKEY_STATE_JUMP		2
 
-#define MONKEY_JUMP_SPEED_X		0.14f
+#define MONKEY_JUMP_SPEED_X		0.13f
 #define MONKEY_JUMP_SPEED_Y		0.15f
 
 #define MONKEY_WALK_SPEED_X		0.2f
@@ -25,9 +25,12 @@ class Monkey: public GameObject
 	bool isDisableJump = false;
 	bool isHitted = false;
 	bool isHide = false;
-
+	
 public:
 	float xde, yde;
+	float start_x ;
+	float start_y ;
+
 	Monkey();
 	virtual void Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects = NULL);
 	virtual void Render();
