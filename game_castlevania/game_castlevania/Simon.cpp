@@ -15,6 +15,7 @@
 #include "Boomerang.h"
 #include "HolyWater.h"
 #include "Axe.h"
+#include "Grid.h"
 
 Simon* Simon::__instance = NULL;
 
@@ -160,7 +161,7 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 
 			if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
 			{
-				Grid* grid = Grid::GetInstance();
+				//Grid* grid = Grid::GetInstance();
 				//grid->deleteObject(knight);
 				//this->state = SIMON_ANI_DEATH_RIGHT;
 				this->x++;
@@ -174,17 +175,22 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			float l1, t1, r1, b1, l2, t2, r2, b2;
 			GetBoundingBox(l1, t1, r1, b1);
 			bat->GetBoundingBox(l2, t2, r2, b2);
-
+			Grid* grid = Grid::GetInstance();
+			//grid->deleteObject(bat);
 			if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
 			{
-				Grid* grid = Grid::GetInstance();
+				whip->Update(dt,colliable_objects);
+				//bat->SetPosition(0,0);
+				//grid->deleteObject(bat);
+				
+				//* grid = Grid::GetInstance();
 				//grid->deleteObject(simon);
 				//this->state = SIMON_ANI_DEATH_RIGHT;
 				//grid->deleteObject(simon);
-				this->x++;
+				/*this->x++;
 				this->y = this->y - 10;
 				this->vy = 0.1;
-				this->vx = 0.1;
+				this->vx = 0.1;*/
 			}
 		}
 
@@ -199,8 +205,8 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
 			{
 				Grid* grid = Grid::GetInstance();
-				this->state = SIMON_ANI_DEATH_RIGHT;
-				grid->deleteObject(this);
+				//this->state = SIMON_ANI_DEATH_RIGHT;
+				grid->deleteObject(monkey);
 				
 			}
 		}

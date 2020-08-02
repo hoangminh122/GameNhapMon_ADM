@@ -6,6 +6,7 @@
 #include "Bat.h"
 #include "Knight.h"
 #include "Ghost.h"
+#include "Monkey.h"
 
 
 class Whip: public GameObject

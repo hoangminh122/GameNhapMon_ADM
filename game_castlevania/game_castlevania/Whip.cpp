@@ -6,7 +6,7 @@
 void Whip::Render()
 {
 	animation_set->at(1)->Render(x, y);
-	//RenderBoundingBox();
+	RenderBoundingBox();
 }
 
 void Whip::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
@@ -22,22 +22,42 @@ void Whip::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			//DebugOut(L"whip: ml:%f,mt:%f,mr:%f,\mb:%f torch: l:%f,t:%f,r:%f,b:%f \n", l1, t1, r1, b1, l2, t2, r2, b2);
 		if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
 		{
+			//va cham con monkey
+			/*if (dynamic_cast<Monkey*>(colliable_objects->at(i)))
+			{
+				DebugOut(L" con khi cham on khi cham on khi cham on khi cham on khi cham on khi cham on khi cham on khi chamon khi cham");
+				Monkey* monkey = dynamic_cast<Monkey*>(colliable_objects->at(i));
+				monkey->SetDied();
+				DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
+
+			}*/
+			//va cham con ma
+			//if (dynamic_cast<Ghost*>(colliable_objects->at(i)))
+			//{
+			//	DebugOut(L"co va cham co va cham co va chamco va chamco va chamco va cham co va cham co va cham co va cham co va cham co va cham co va cham co va chamco va cham");
+			//	Ghost* ghost = dynamic_cast<Ghost*>(colliable_objects->at(i));
+			//	ghost->SetDied();
+			//	//DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
+
+			//}
+
 			//va cham con doi
 			if (dynamic_cast<Bat*>(colliable_objects->at(i)))
 			{
 				DebugOut(L"co va cham co va cham co va chamco va chamco va chamco va cham co va cham co va cham co va cham co va cham co va cham co va cham co va chamco va cham");
 				Bat* bat = dynamic_cast<Bat*>(colliable_objects->at(i));
-				bat->SetDied();
+				bat->SetPosition(0, 0);
+				//bat->SetDied();
 				//DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
 
 			}
-			if (dynamic_cast<Knight*>(colliable_objects->at(i)))
-			{
-				Knight* knight = dynamic_cast<Knight*>(colliable_objects->at(i));
-				knight->SetDied();
-				//DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
+			//if (dynamic_cast<Knight*>(colliable_objects->at(i)))
+			//{
+			//	Knight* knight = dynamic_cast<Knight*>(colliable_objects->at(i));
+			//	knight->SetDied();
+			//	//DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
 
-			}
+			//}
 
 			if (dynamic_cast<Torch*>(colliable_objects->at(i)))
 			{
@@ -56,8 +76,9 @@ void Whip::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 					//DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
 
 				}
-		}
+				
 
+		}
 	}
 }
 
