@@ -7,6 +7,8 @@ class Zombie:public GameObject
 	int nx_zombie = -1;
 public:
 	float x_de = NULL;
+	int isDied = 0;
+	void SetDied() { isDied = 1; };
 	float y_de = NULL;
 	Zombie(float x = 0.0f, float y = 0.0f);
 	virtual void Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects = NULL);

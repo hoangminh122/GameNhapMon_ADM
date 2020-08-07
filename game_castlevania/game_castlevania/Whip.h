@@ -7,7 +7,7 @@
 #include "Knight.h"
 #include "Ghost.h"
 #include "Monkey.h"
-
+#include "HolyWater.h"
 
 class Whip: public GameObject
 {

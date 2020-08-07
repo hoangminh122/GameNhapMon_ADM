@@ -16,6 +16,7 @@
 #include "HolyWater.h"
 #include "Axe.h"
 #include "Grid.h"
+#include "Zombie.h"
 
 Simon* Simon::__instance = NULL;
 
@@ -164,8 +165,9 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 				//Grid* grid = Grid::GetInstance();
 				//grid->deleteObject(knight);
 				//this->state = SIMON_ANI_DEATH_RIGHT;
-				this->x++;
-				this->y = this->y-5;
+				/*this->x++;
+				this->y = this->y-5;*/
+				whip->Update(dt, colliable_objects);
 			}
 		}
 		if (dynamic_cast<Bat*>(colliable_objects->at(i)))
@@ -196,7 +198,6 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 
 		if (dynamic_cast<Monkey*>(colliable_objects->at(i)))
 		{
-			//Simon* simon = dynamic_cast<Simon*>(colliable_objects->at(i));
 			Monkey* monkey = dynamic_cast<Monkey*>(colliable_objects->at(i));						//con doi
 			float l1, t1, r1, b1, l2, t2, r2, b2;
 			GetBoundingBox(l1, t1, r1, b1);
@@ -206,8 +207,25 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			{
 				Grid* grid = Grid::GetInstance();
 				//this->state = SIMON_ANI_DEATH_RIGHT;
-				grid->deleteObject(monkey);
+				//grid->deleteObject(monkey);
+				whip->Update(dt, colliable_objects);
 				
+			}
+		}
+		if (dynamic_cast<Zombie*>(colliable_objects->at(i)))
+		{
+			Zombie* zombie = dynamic_cast<Zombie*>(colliable_objects->at(i));						//con doi
+			float l1, t1, r1, b1, l2, t2, r2, b2;
+			GetBoundingBox(l1, t1, r1, b1);
+			zombie->GetBoundingBox(l2, t2, r2, b2);
+
+			if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
+			{
+				Grid* grid = Grid::GetInstance();
+				//this->state = SIMON_ANI_DEATH_RIGHT;
+				//grid->deleteObject(monkey);
+				whip->Update(dt, colliable_objects);
+
 			}
 		}
 

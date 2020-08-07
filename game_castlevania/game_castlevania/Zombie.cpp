@@ -16,6 +16,11 @@ Zombie::Zombie(float x, float y)
 
 void Zombie::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 {
+	if (this->isDied == 1) {
+		Grid* grid = Grid::GetInstance();
+		grid->deleteObject(this);
+	}
+
 	float camX, camY;
 	Camera* cam = Camera::GetInstance();
 	camX = cam->GetCameraPosition().x;
