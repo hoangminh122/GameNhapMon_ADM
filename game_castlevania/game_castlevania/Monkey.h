@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "GameObject.h"
 
-#define MONKEY_BBOX_WIDTH		16
+#define MONKEY_BBOX_WIDTH		18
 #define MONKEY_BBOX_HEIGHT		16
 
 #define	MONKEY_STATE_IDLE		0
@@ -32,6 +32,8 @@ public:
 	float start_y ;
 
 	Monkey();
+	int isDied = 0;
+	void SetDied() { isDied = 1; };
 	virtual void Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects = NULL);
 	virtual void Render();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);

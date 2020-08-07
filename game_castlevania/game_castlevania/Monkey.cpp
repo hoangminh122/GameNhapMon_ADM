@@ -16,120 +16,107 @@ Monkey::Monkey()
 
 void Monkey::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 {
+	Grid* grid = Grid::GetInstance();
+	Map* map = Map::GetInstance();
+	if (isDied == 1)
+		grid->deleteObject(this);
 
-	/*x += 2 * dx + nx * 0.2f;
-	y += 2 * dy + nx * 0.2f;
-	if (x > xde +50) {
-				x = xde;
-				y = yde;
-				vx = 0;
-				vx = 0;
+	float camX, camY;
+	Camera* cam = Camera::GetInstance();
+	camX=cam->GetCameraPosition().x;
+	camY= cam->GetCameraPosition().y;
+
+	//if (x < camX || x + MONKEY_BBOX_WIDTH > camX + SCREEN_WIDTH)
+	DebugOut(L"camX:%f, x:%f\n", camX, x);
+	if (camX!=0&&camX<x-50 && camX + SCREEN_WIDTH> x + MONKEY_BBOX_WIDTH)
+	{
+		DebugOut(L"vao setstate\n");
+
+		if(!isJump)
+			SetState(MONKEY_STATE_JUMP);
+	}
+	else
+	{
+		isHide = true;
+	}
+	if (y < yde - 50 && isJump)
+		vy = MONKEY_JUMP_SPEED_Y;
+
+
+	GameObject::Update(dt);
+
+	vector<LPGAMEOBJECT> listObject_Brick;
+	listObject_Brick.clear();
+	for (UINT i = 0; i < coObjects->size(); i++)
+		if (dynamic_cast<Brick*>(coObjects->at(i)))
+			listObject_Brick.push_back(coObjects->at(i));
+
+	vector<LPCOLLISIONEVENT> coEvents;
+	vector<LPCOLLISIONEVENT> coEventsResult;
+	coEvents.clear();
+	//DebugOut(L"truoc luc va cham vy=%f, dy:%f\n", vy, dy);
+
+	CalcPotentialCollisions(&listObject_Brick, coEvents); // Lấy danh sách các va chạm 
+	if (coEvents.size() == 0)
+	{
+		y += dy;
+		x += dx*nx;
+		//DebugOut(L"sau khi va cham vy=%f, dy:%f\n",vy, dy);
+
+	}
+	else
+	{
+		float min_tx, min_ty, nx = 0, ny;
+		FilterCollision(coEvents, coEventsResult, min_tx, min_ty, nx, ny);
+		x += min_tx * dx + nx * 0.2f;
+		y += min_ty * dy + ny * 0.2f;
+		if (nx != 0)
+		{
+			//vx *= -1;
+			nx *= -1;
+		}
+
+		if (ny != 0)
+		{
+			vy = 0;
+			vx = 0;
+		}
+		for (UINT i = 0; i < coEventsResult.size(); i++)
+		{
+			LPCOLLISIONEVENT e = coEventsResult[i];
+
+			if (dynamic_cast<Brick*>(e->obj))
+			{
+
 				isIdle = true;
-				 isJump = false;
-				 isDisableJump = false;
-				 isHitted = false;
-				 isHide = false;
-	}*/
+				isJump = false;
+				//this->nx = -this->nx;
+				//vy = 0.05f;
+			}
+		}
+	}
+	//if ((x < x_left && vx < 0) || (x > x_right && vx > 0))
+	//	nx *= -1;
 
+	for (UINT i = 0; i < coEvents.size(); i++)
+		delete coEvents[i];
+	if (x > map->GetWidth() - 10 || y < 1 || x<1 || y>map->GetHeight())
+	if (x > map->GetWidth() - 10 || y < 1 || x<1 || y>map->GetHeight())
+	{
+		x = start_x;
+			y = start_y;
+			vx = 0;
+			vx = 0;
+			isIdle = true;
+			 isJump = false;
+			 isDisableJump = false;
+			 isHitted = false;
+			 isHide = false;
 
-
-	//float camX, camY;
-	//Camera* cam = Camera::GetInstance();
-	//camX=cam->GetCameraPosition().x;
-	//camY= cam->GetCameraPosition().y;
-
-	////if (x < camX || x + MONKEY_BBOX_WIDTH > camX + SCREEN_WIDTH)
-	//DebugOut(L"camX:%f, x:%f\n", camX, x);
-	//if (camX!=0&&camX<x-50 && camX + SCREEN_WIDTH> x + MONKEY_BBOX_WIDTH)
-	//{
-	//	DebugOut(L"vao setstate\n");
-
-	//	if(!isJump)
-	//		SetState(MONKEY_STATE_JUMP);
-	//}
-	//else
-	//{
-	//	isHide = true;
-	//}
-	//if (y < yde - 50 && isJump)
-	//	vy = MONKEY_JUMP_SPEED_Y;
-
-
-	//GameObject::Update(dt);
-
-	//vector<LPGAMEOBJECT> listObject_Brick;
-	//listObject_Brick.clear();
-	//for (UINT i = 0; i < coObjects->size(); i++)
-	//	if (dynamic_cast<Brick*>(coObjects->at(i)))
-	//		listObject_Brick.push_back(coObjects->at(i));
-
-	//vector<LPCOLLISIONEVENT> coEvents;
-	//vector<LPCOLLISIONEVENT> coEventsResult;
-	//coEvents.clear();
-	////DebugOut(L"truoc luc va cham vy=%f, dy:%f\n", vy, dy);
-
-	//CalcPotentialCollisions(&listObject_Brick, coEvents); // Lấy danh sách các va chạm 
-	//if (coEvents.size() == 0)
-	//{
-	//	y += dy;
-	//	x += dx*nx;
-	//	//DebugOut(L"sau khi va cham vy=%f, dy:%f\n",vy, dy);
-
-	//}
-	//else
-	//{
-	//	float min_tx, min_ty, nx = 0, ny;
-	//	FilterCollision(coEvents, coEventsResult, min_tx, min_ty, nx, ny);
-	//	x += min_tx * dx + nx * 0.2f;
-	//	y += min_ty * dy + ny * 0.2f;
-	//	if (nx != 0)
-	//	{
-	//		//vx *= -1;
-	//		nx *= -1;
-	//	}
-
-	//	if (ny != 0)
-	//	{
-	//		vy = 0;
-	//		vx = 0;
-	//	}
-	//	for (UINT i = 0; i < coEventsResult.size(); i++)
-	//	{
-	//		LPCOLLISIONEVENT e = coEventsResult[i];
-
-	//		if (dynamic_cast<Brick*>(e->obj))
-	//		{
-
-	//			isIdle = true;
-	//			isJump = false;
-	//			//this->nx = -this->nx;
-	//			//vy = 0.05f;
-	//		}
-	//	}
-	//}
-	////if ((x < x_left && vx < 0) || (x > x_right && vx > 0))
-	////	nx *= -1;
-
-	//for (UINT i = 0; i < coEvents.size(); i++)
-	//	delete coEvents[i];
-	//Map* map = Map::GetInstance();
-	//Grid* grid = Grid::GetInstance();
-	//if (x > map->GetWidth() - 10 || y < 1 || x<1 || y>map->GetHeight())
-	//{
-	//	x = start_x;
-	//		y = start_y;
-	//		vx = 0;
-	//		vx = 0;
-	//		isIdle = true;
-	//		 isJump = false;
-	//		 isDisableJump = false;
-	//		 isHitted = false;
-	//		 isHide = false;
-
-	//}
-	//	//grid->deleteObject(this);
-	//else
-	//	grid->Update(this);
+	}
+		//grid->deleteObject(this);
+	else
+		grid->Update(this);
 }
 
 void Monkey::Render()
@@ -139,7 +126,7 @@ void Monkey::Render()
 		ani = 1;
 	if (state == MONKEY_STATE_JUMP)
 		ani = 3;
-	animation_set->at(3)->Render(x, y);
+	animation_set->at(ani)->Render(x, y);
 	RenderBoundingBox();
 }
 

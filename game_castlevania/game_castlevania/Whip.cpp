@@ -2,6 +2,7 @@
 #include "Candle.h"
 #include "Grid.h"
 #include "Zombie.h"
+#include "Item.h"
 
 void Whip::Render()
 {
@@ -51,8 +52,15 @@ void Whip::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			{
 				DebugOut(L"co va cham co va cham co va chamco va chamco va chamco va cham co va cham co va cham co va cham co va cham co va cham co va cham co va chamco va cham");
 				Bat* bat = dynamic_cast<Bat*>(colliable_objects->at(i));
-				bat->SetPosition(0, 0);
-				//bat->SetDied();
+				Grid* grid = Grid::GetInstance();
+				
+				/*bat->SetPosition(x -10, y);
+				bat->SetColi(true);
+				Bat::heard = 1;
+				bat->vx = 0;
+				bat->dt = 0;*/
+
+				bat->SetDied();
 				//DebugOut(L"Co va cham voi lua tai vi tri x:%f,y%f\n",torch->x,torch->y);
 
 			}

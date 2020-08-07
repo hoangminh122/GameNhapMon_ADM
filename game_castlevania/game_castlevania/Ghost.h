@@ -10,6 +10,8 @@ class Ghost : public GameObject
 public:
 	bool isHide = false;
 	float x_left, x_right;
+	int isDied = 0;
+	void SetDied() { isDied = 1; };
 	Ghost();
 	Ghost(float X, float Y, int Direction);
 	virtual ~Ghost();
