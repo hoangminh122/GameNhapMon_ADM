@@ -181,14 +181,15 @@ void Simon::Update(DWORD dt, vector<LPGAMEOBJECT>* colliable_objects)
 			//grid->deleteObject(bat);
 			if (Game::AABB(l1, t1, r1, b1, l2, t2, r2, b2))
 			{
-				DebugOut(L"state state", bat->state);
-				if (bat->ID_Item == 1) {
+				whip->Update(dt, colliable_objects);
+				//DebugOut(L"state state", bat->state);
+				/*if (bat->ID_Item == 1) {
 					
 					bat->SetDied();
 				}
-				else {
-					whip->Update(dt, colliable_objects);
-				}
+				else {*/
+					
+				//}
 				
 				//->SetDied();
 				//bat->SetPosition(0,0);

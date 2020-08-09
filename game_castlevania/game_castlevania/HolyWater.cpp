@@ -1,7 +1,7 @@
 ﻿#include "HolyWater.h"
 #include "define.h"
 #include "Brick.h"
-
+#include "Grid.h"
 HolyWater::HolyWater()
 {
 	Weapon::Weapon();
@@ -14,6 +14,11 @@ HolyWater::HolyWater()
 }
 void HolyWater::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 {
+	if (this->isDied == 1) {
+		Grid* grid = Grid::GetInstance();
+		grid->deleteObject(this);
+	}
+
 	if (!isAttack) return;
 	if (state == 0)
 	vx = HolyWater_SPEED_X * nx;
@@ -106,10 +111,10 @@ void HolyWater::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 
 void HolyWater::Render()
 {
-	if (!isAttack) return;
+	/*if (!isAttack) return;
 
 	animation_set->at(state)->Render(x, y);
-	RenderBoundingBox();
+	RenderBoundingBox();*/
 }
 
 void HolyWater::GetBoundingBox(float& left, float& top, float& right, float& bottom)

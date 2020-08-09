@@ -10,8 +10,12 @@ class Bat:public GameObject
 	
 	
 public:
+	static int heard;
+	int ID_Item;
 	int isDied = 0;
 	bool isIdle;
+	bool isColi = false;
+	void SetColi(bool t);
 	float left_max, right_max, top_max, bot_max;
 	void SetDied() { isDied = 1; };
 	Bat(float x = 0.0f, float y = 0.0f);

@@ -231,7 +231,9 @@ void CPlayScene::_ParseSection_OBJECTS(string line)
 		float r = atof(tokens[6].c_str());
 		float t = atof(tokens[7].c_str());
 		float b = atof(tokens[8].c_str());
+		
 		Bat* bat = (Bat*)obj;
+//		bat->ID_Item = (int)atof(tokens[9].c_str());
 		bat->left_max = l;
 		bat->right_max = r;
 		bat->top_max = t;

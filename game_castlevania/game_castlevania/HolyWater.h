@@ -7,6 +7,8 @@ class HolyWater:public Weapon
 public:
 	float denta_x;
 	HolyWater();
+	int isDied;
+	void SetDied() { isDied = 1; };
 	bool isFirst = false;
 	virtual void Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects = NULL);
 	virtual void Render();
